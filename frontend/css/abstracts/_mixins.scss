@@ -1,0 +1,36 @@
+// Breakpoints
+@media (min-width: 64em) {
+  // styles go here
+}
+
+// 479px (Mob-Portrait). 768 (Mob-Landscape),
+// 992px (Tablet), 1081px (Base/desktop), 1920px
+$breakpoints-up: (
+  "mobPortrait"  : "29.938em",
+  "mobLandscape" : "48em",
+  "tablet"       : "62em",
+  "base"         : "67.563em",
+  "large"        : "120em",
+);
+
+// 478px (Mob-Portrait). 767 (Mob-Landscape),
+// 991px (Tablet), 1080px (Base/desktop), 1919px
+$breakpoints-down: (
+  "mobPortrait"  : "29.875em",
+  "mobLandscape" : "47.938em",
+  "tablet"       : "61.938em",
+  "base"         : "67.5em",
+  "large"        : "119.938em",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

@@ -1,0 +1,12 @@
+:root {
+  max-width: 1400;
+  font-size: 18px;
+}
+
+.section {
+  margin: 3.556rem;
+}
+
+.padding {
+  padding-inline: 1.778rem;
+}
